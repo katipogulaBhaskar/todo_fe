@@ -1,0 +1,171 @@
+/* General body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #FFB300, #FF9F00, #FF6F00); /* Mango gradient */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    transition: background 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Main container styling for the signup form */
+.signup-container {
+    background: rgba(255, 255, 255, 0.85); /* Slight transparency for depth */
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    padding: 40px 35px;
+    text-align: center;
+    box-sizing: border-box;
+    transform: scale(1);
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    backdrop-filter: blur(10px); /* Add blur effect to the background behind the form */
+    animation: slideIn 1s ease-out;
+}
+
+/* Title styling */
+h1 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+h1:hover {
+    color: #FFB300; /* Mango color on hover */
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+/* Input field styling */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    outline: none;
+    color: #333;
+    background-color: #fafafa;
+    transition: all 0.3s ease-out, transform 0.2s ease;
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Input focus effect */
+input:focus {
+    border-color: #FFB300;
+    box-shadow: 0 0 10px rgba(255, 179, 0, 0.5); /* Mango glow on focus */
+    transform: scale(1.02);
+}
+
+/* Button styling with new color scheme (Teal and Coral) */
+button {
+    width: 100%;
+    padding: 12px 0;
+    background: linear-gradient(135deg, #009688, #FF7043); /* Teal and Coral gradient */
+    color: #fff;
+    border: none;
+    border-radius: 30px; /* Rounded corners */
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out, transform 0.2s ease, background 0.5s ease;
+    transform: scale(1);
+    box-shadow: 0 5px 15px rgba(0, 150, 136, 0.3); /* Teal shadow */
+    position: relative;
+    overflow: hidden; /* To apply cool hover effects */
+}
+
+/* Button hover effect with contrasting gradient */
+button:hover {
+    background: linear-gradient(135deg, #FF7043, #009688); /* Reverse gradient on hover */
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 150, 136, 0.4); /* Enhanced shadow on hover */
+}
+
+/* Button active state */
+button:active {
+    background: linear-gradient(135deg, #00796B, #FF5722); /* Darker Teal and Coral on click */
+    transform: scale(0.98);
+    box-shadow: 0 5px 10px rgba(0, 150, 136, 0.3); /* Slight shadow on click */
+}
+
+button:disabled {
+    background-color: #bbb;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Error message styling */
+p {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 15px;
+    animation: fadeIn 1s ease-in-out;
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+/* Login redirection text */
+p span {
+    font-size: 1rem;
+    color: #009688; /* Teal color for login text */
+    cursor: pointer;
+    transition: color 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+p span:hover {
+    color: #FF7043; /* Coral color on hover */
+}
+
+/* Keyframe animation for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slide-in animation for the container */
+@keyframes slideIn {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Small devices (mobile phones) */
+@media (max-width: 600px) {
+    .signup-container {
+        padding: 30px 25px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+
+    input {
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,185 @@
+/* General body styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #FFB300, #FF9F00, #FF6F00); /* Mango gradient */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    transition: background 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Main container for the todo list */
+.todo-container {
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: 20px;
+    width: 100%;
+    max-width: 600px;
+    padding: 30px 40px;
+    text-align: center;
+    box-sizing: border-box;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    animation: slideIn 1s ease-out;
+}
+
+/* Title styling */
+h2 {
+    color: #333;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Input field for adding tasks */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    border: 2px solid #ddd;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    outline: none;
+    color: #333;
+    background-color: #fafafa;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Focused input field */
+input:focus {
+    border-color: #FFB300;
+    box-shadow: 0 0 10px rgba(255, 179, 0, 0.5);
+}
+
+/* Button styling for add task */
+button {
+    width: 100%;
+    padding: 12px 0;
+    background: linear-gradient(135deg, #009688, #FF7043);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 15px rgba(0, 150, 136, 0.2);
+}
+
+/* Hover effect for the add task button */
+button:hover {
+    background: linear-gradient(135deg, #FF7043, #009688);
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 150, 136, 0.3);
+}
+
+/* Task List styling */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background: #fff;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+/* Task text styling */
+li span {
+    font-size: 1.1rem;
+    flex-grow: 1;
+    color: #333;
+    transition: text-decoration 0.3s ease, color 0.3s ease;
+}
+
+/* Task completed (strikethrough) */
+li span.completed {
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* Buttons for each task (Edit, Complete, Delete) */
+button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin: 0 5px;
+    cursor: pointer;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button hover effects */
+button:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+
+/* Special color for delete button */
+button.delete {
+    background: #FF4136;
+}
+
+/* Delete button hover effect */
+button.delete:hover {
+    background: #e03e30;
+}
+
+/* Button for undo task completion */
+button.undo {
+    background: #f0ad4e;
+}
+
+button.undo:hover {
+    background: #ec971f;
+}
+
+/* Keyframe animation for the slide-in effect */
+@keyframes slideIn {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Small devices (mobile phones) */
+@media (max-width: 600px) {
+    .todo-container {
+        padding: 20px 15px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+
+    input {
+        font-size: 1rem;
+    }
+
+    li span {
+        font-size: 1rem;
+    }
+}
