@@ -11,7 +11,7 @@ const Logout = () => {
             setIsLoggingOut(true);
 
             // Call the logout API on the backend
-            await axios.post('http://localhost:5000/api/logout');
+            await axios.post('https://todo-be-0tqo.onrender.com/api/logout');
 
             // Clear user data from localStorage
             localStorage.removeItem('userId');

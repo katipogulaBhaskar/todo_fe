@@ -26,7 +26,7 @@ const Signup = () => {
 
         try {
             // Make the POST request to the backend using axios
-            const response = await axios.post('http://localhost:5000/api/signupUser', formData);
+            const response = await axios.post('https://todo-be-0tqo.onrender.com/api/signupUser', formData);
 
             console.log(response);
 
